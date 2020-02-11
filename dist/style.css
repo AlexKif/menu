@@ -1,0 +1,197 @@
+@font-face {
+  font-family: manropeLight;
+  src: url("/fonts/Manropelight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: philosopherBold;
+  src: url("/fonts/Philosopher-Bold.ttf") format("truetype"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+.d-block {
+  display: block !important; }
+
+.header {
+  background: #222129;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 50px 50px;
+    align-items: center; }
+  .header-navigation {
+    height: calc(100vh - 150px);
+    position: relative; }
+    .header-navigation__item:nth-child(-n+3) {
+      margin-bottom: 132px; }
+    .header-navigation__wrapper {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -45%); }
+  .header__background {
+    display: none; }
+
+.logo {
+  max-width: 230px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 20; }
+  .logo__link {
+    display: block; }
+  .logo__image {
+    display: inherit; }
+
+.burger {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+  left: 4px; }
+  .burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: .3s all linear; }
+    .burger__line_first {
+      top: 0; }
+    .burger__line_second, .burger__line_third {
+      top: 50%;
+      transform: translateY(-50%); }
+    .burger__line_fourth {
+      bottom: 0; }
+  .burger_active .burger__line_first, .burger_active .burger__line_fourth {
+    opacity: 0; }
+  .burger_active .burger__line_second {
+    transform: translateY(-50%) rotate(45deg); }
+  .burger_active .burger__line_third {
+    transform: translateY(-50%) rotate(-45deg); }
+
+.navigation {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: .3s; }
+  .navigation_open {
+    height: calc(100vh - 200px);
+    overflow: visible;
+    margin-top: 50px; }
+  .navigation__wrapper {
+    max-width: calc(100% + 100px - 275 * 2px);
+    width: 100%;
+    margin: 0 auto; }
+  .navigation__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .navigation__item {
+    flex-basis: 33.333%;
+    text-align: center; }
+    .navigation__item a {
+      display: block;
+      margin: 0 auto; }
+  .navigation__link {
+    color: #fff;
+    font-family: philosopherBold, sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 50px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
+  .navigation__sub-link {
+    font-family: manropeLight, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #D1D1D1;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-top: 8px !important; }
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100vh; }
+  .background__wrapper {
+    position: relative;
+    width: inherit;
+    height: inherit; }
+
+.ellipse {
+  border: 1px solid rgba(209, 209, 209, 0.1);
+  border-radius: 50%;
+  margin-right: -50%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -55%);
+  position: absolute; }
+  .ellipse-1 {
+    width: 654px;
+    height: 654px; }
+  .ellipse-2 {
+    width: 428px;
+    height: 428px; }
+
+.line {
+  background: #D1D1D1;
+  opacity: .15;
+  position: absolute; }
+  .line-vertical {
+    width: 1px;
+    height: 100%; }
+  .line-horizontal {
+    height: 1px;
+    width: 100%; }
+  .line-1 {
+    left: 9.3%; }
+  .line-2 {
+    left: 34%; }
+  .line-3 {
+    left: 50%;
+    transform: translateX(-50%); }
+  .line-4 {
+    right: 34%; }
+  .line-5 {
+    right: 9.3%; }
+  .line-6 {
+    top: 18%; }
+  .line-7 {
+    bottom: 15%; }
+
+@media screen and (max-width: 1200px) {
+  .navigation__menu {
+    flex-direction: column; }
+  .navigation__wrapper {
+    max-width: 100%; }
+  .header-navigation__item {
+    margin-bottom: 20px; }
+    .header-navigation__item:nth-child(-n+3) {
+      margin-bottom: 20px; }
+    .header-navigation__item:last-child {
+      margin-bottom: 0; } }
+
